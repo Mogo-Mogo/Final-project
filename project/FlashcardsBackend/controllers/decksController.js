@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Deck = require('../models/deckModel');
+const Deck = require('../models/Deck');
 
 /**
  * Create a new deck.
