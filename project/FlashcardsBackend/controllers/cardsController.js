@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import { Card } from '../models/Card.js';
 
-const createCard = async (req, res) => {
+export const  createCard = async (req, res) => {
     try {
         const { title } = req.body;
         if (!title || typeof title !== 'string' || !title.trim()) {
@@ -16,7 +16,7 @@ const createCard = async (req, res) => {
 };
 
 
-const getAllCards = async (req, res) => {
+export const getAllCards = async (req, res) => {
     try {
         const cards = await Card.find().sort({ createdAt: -1 });
         return res.status(200).json(cards);
@@ -26,7 +26,7 @@ const getAllCards = async (req, res) => {
 };
 
 
-const getCardById = async (req, res) => {
+export const getCardById = async (req, res) => {
     try {
         const { id } = req.params;
         if (!mongoose.Types.ObjectId.isValid(id)) {
