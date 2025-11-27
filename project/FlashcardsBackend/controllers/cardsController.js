@@ -4,6 +4,9 @@ import { Card } from '../models/Card.js';
 export const  createCard = async (req, res) => {
     try {
         const { deckId } = req.params.deckId;
+        if (!mongoose.Types.ObjectId.isValid(deckId)) {
+            return res.status(400).json({ error: 'Invalid deck id' });
+        }
         const card = await Card.create({ deckId: deckId, question: req.body.question, answer: req.body.answer });
         return res.status(201).json(card);
     } catch (err) {
