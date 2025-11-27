@@ -4,4 +4,5 @@ const cardSchema = new mongoose.Schema({
     question: { type: String, required: true },
     answer: { type: String, required: true },
     isFavorite: { type: Boolean, default: false },
-    createdAt: { type: Date, default: Date.now }
+    createdAt: { type: Date, default: Date.now },
+});
