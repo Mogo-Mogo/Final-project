@@ -14,6 +14,6 @@ router.get('/:id', getDeckById);
 router.post('/', createDeck);
 router.delete('/:id', deleteDeck);
 router.get('/:deckId/cards', getCardsByDeck);
-router.post('/')
+router.post('/:deckId/')
 
 export default router;
