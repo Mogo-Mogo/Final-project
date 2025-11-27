@@ -1,18 +1,14 @@
 const mongoose = require('mongoose');
 const Card = require('../models/deckModel');
 
-/**
- * Create a new deck.
- * Expects { title } in req.body. Decks only have a title and createdAt.
- */
-const createDeck = async (req, res) => {
+const createCard = async (req, res) => {
     try {
         const { title } = req.body;
         if (!title || typeof title !== 'string' || !title.trim()) {
             return res.status(400).json({ error: 'Title is required' });
         }
 
-        const deck = await Deck.create({ title: title.trim() });
+        const deck = await Card.create({ title: title.trim() });
         return res.status(201).json(deck);
     } catch (err) {
         return res.status(500).json({ error: err.message });
@@ -22,7 +18,7 @@ const createDeck = async (req, res) => {
 /**
  * Get all decks.
  */
-const getAllDecks = async (req, res) => {
+const getAllCards = async (req, res) => {
     try {
         const decks = await Deck.find().sort({ createdAt: -1 });
         return res.status(200).json(decks);
