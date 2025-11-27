@@ -44,9 +44,6 @@ const getCardById = async (req, res) => {
     }
 };
 
-/**
- * Delete a card by id.
- */
 const deleteCard = async (req, res) => {
     try {
         const { id } = req.params;
