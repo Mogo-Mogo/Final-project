@@ -1,6 +1,6 @@
 import express from 'express';
 import {
-  createCard,
+  updateCard,
   getAllCards,
   getCardById,
   deleteCard,
@@ -10,7 +10,7 @@ const router = express.Router();
 
 router.get('/', getAllCards);
 router.get('/:id', getCardById);
-router.put('/:id', createCard);
+router.put('/:id', updateCard);
 router.delete('/:id', deleteCard);
 
 export default router;
