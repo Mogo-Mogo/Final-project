@@ -5,7 +5,7 @@ import { Deck } from '../models/Deck.js';
  * Create a new deck.
  * Expects { title } in req.body. Decks only have a title and createdAt.
  */
-const createDeck = async (req, res) => {
+export const createDeck = async (req, res) => {
     try {
         const { title } = req.body;
         if (!title || typeof title !== 'string' || !title.trim()) {
@@ -71,11 +71,4 @@ const deleteDeck = async (req, res) => {
     } catch (err) {
         return res.status(500).json({ error: err.message });
     }
-};
-
-module.exports = {
-    createDeck,
-    getAllDecks,
-    getDeckById,
-    deleteDeck,
 };
