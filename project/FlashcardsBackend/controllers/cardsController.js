@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import { Card } from '../models/Card.js';
 
-export const  createCard = async (req, res) => {
+export const createCard = async (req, res) => {
     try {
         const { deckId } = req.params.deckId;
         if (!mongoose.Types.ObjectId.isValid(deckId)) {
