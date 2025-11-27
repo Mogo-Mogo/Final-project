@@ -57,6 +57,29 @@ export const getCardsByDeck = async (req, res) => {
     }
 };
 
+export const updateCard = async (req, res) => {
+    try {
+        const { id } = req.params;
+        if (!mongoose.Types.ObjectId.isValid(id)) {
+            return res.status(400).json({ error: 'Invalid card id' });
+        }
+
+        const updated = await Card.findByIdAndUpdate(
+            id,
+            { $set: req.body },
+            { new: true, runValidators: true }
+        );
+
+        if (!updated) {
+            return res.status(404).json({ error: 'Card not found' });
+        }
+
+        return res.status(200).json(updated);
+    } catch (err) {
+        return res.status(500).json({ error: err.message });
+    }
+}
+
 export const deleteCard = async (req, res) => {
     try {
         const { id } = req.params;
