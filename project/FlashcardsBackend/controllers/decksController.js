@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const Deck = require('../models/Deck');
+import mongoose from 'mongoose';
+import { Deck } from '../models/Deck.js';
 
 /**
  * Create a new deck.

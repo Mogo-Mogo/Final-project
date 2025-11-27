@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const Card = require('../models/Card');
+import mongoose from 'mongoose';
+import { Card } from '../models/Card.js';
 
 const createCard = async (req, res) => {
     try {
