@@ -51,7 +51,7 @@ app.post('/register', (req, res) => {
 const app = express();
 app.use(express.json());           
 app.use(logger);                   
-app.use('/notes', notesRoutes);
+app.use('/notes', cardsRoutes);
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
