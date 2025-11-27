@@ -9,7 +9,7 @@ import {
 const router = express.Router();
 
 router.get('/', getAllCards);
-router.get('/:id', getCardById);
+router.get('/:cardId', getCardById);
 router.put('/:id', updateCard);
 router.delete('/:id', deleteCard);
 router.patch('/:id', updateCard);
