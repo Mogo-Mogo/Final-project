@@ -8,16 +8,14 @@ const createCard = async (req, res) => {
             return res.status(400).json({ error: 'Title is required' });
         }
 
-        const deck = await Card.create({ title: title.trim() });
-        return res.status(201).json(deck);
+        const card = await Card.create({ title: title.trim() });
+        return res.status(201).json(card);
     } catch (err) {
         return res.status(500).json({ error: err.message });
     }
 };
 
-/**
- * Get all decks.
- */
+
 const getAllCards = async (req, res) => {
     try {
         const cards = await Card.find().sort({ createdAt: -1 });
