@@ -17,7 +17,7 @@ const noteSchema = new mongoose.Schema({
     body: String,
     createdAt: { type: Date, default: Date.now }
 });
-const Note = mongoose.model('Note', noteSchema);
+const Card = mongoose.model('Card', noteSchema);
 
 const getNotes = async (req, res) => {
     const notes = await Note.find();
