@@ -5,6 +5,7 @@ import {
   getDeckById,
   deleteDeck,
 } from '../controllers/decksController.js';
+import { getCardsByDeck } from '../controllers/cardsController.js';
 
 const router = express.Router();
 
