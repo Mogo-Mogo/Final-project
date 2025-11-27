@@ -91,8 +91,13 @@ export const favoriteCard = async (req, res) => {
             id,
             { $set: { isFavorite: true } },
             { new: true }
-        );
-
+        ) 
+        else {
+            const updated = await Card.findByIdAndUpdate(
+                id,
+                { $set: { isFavorite: false } },
+                { new: true }
+            );
         }
 
         if (!updated) {
