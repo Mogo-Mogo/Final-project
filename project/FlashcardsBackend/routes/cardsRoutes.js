@@ -3,7 +3,6 @@ import {
   createCard,
   getAllCards,
   getCardById,
-  updateCard,
   deleteCard,
 } from '../controllers/cardsController.js';
 
