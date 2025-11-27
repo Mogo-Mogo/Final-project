@@ -4,6 +4,7 @@ import {
   getAllCards,
   getCardById,
   deleteCard,
+  favoriteCard,
 } from '../controllers/cardsController.js';
 
 const router = express.Router();
