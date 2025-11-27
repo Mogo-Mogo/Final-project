@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Card = require('../models/deckModel');
+const Card = require('../models/Card');
 
 const createCard = async (req, res) => {
     try {
