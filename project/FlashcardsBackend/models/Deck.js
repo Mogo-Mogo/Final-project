@@ -1,8 +1,6 @@
 import mongoose from "mongoose";
 const deckSchema = new mongoose.Schema({
-    question: { type: String, required: true },
-    answer: { type: String, required: true },
-    isFavorite: { type: Boolean, default: false },
+    title: { type: String, required: true },
     createdAt: { type: Date, default: Date.now },
 });
 export const Deck = mongoose.model("Deck", deckSchema);
