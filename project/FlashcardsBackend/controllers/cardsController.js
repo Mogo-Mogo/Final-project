@@ -51,27 +51,27 @@ const getCardById = async (req, res) => {
 /**
  * Delete a deck by id.
  */
-const deleteDeck = async (req, res) => {
+const deleteCard = async (req, res) => {
     try {
         const { id } = req.params;
         if (!mongoose.Types.ObjectId.isValid(id)) {
             return res.status(400).json({ error: 'Invalid deck id' });
         }
 
-        const deleted = await Deck.findByIdAndDelete(id);
+        const deleted = await Card.findByIdAndDelete(id);
         if (!deleted) {
-            return res.status(404).json({ error: 'Deck not found' });
+            return res.status(404).json({ error: 'Card not found' });
         }
 
-        return res.status(200).json({ message: 'Deck deleted', id: deleted._id });
+        return res.status(200).json({ message: 'Card deleted', id: deleted._id });
     } catch (err) {
         return res.status(500).json({ error: err.message });
     }
 };
 
 module.exports = {
-    createDeck,
-    getAllDecks,
-    getDeckById,
-    deleteDeck,
+    createCard,
+    getAllCards,
+    getCardById,
+    deleteCard,
 };
