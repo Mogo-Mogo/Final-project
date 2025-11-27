@@ -25,14 +25,12 @@ const getAllCards = async (req, res) => {
     }
 };
 
-/**
- * Get a single deck by id.
- */
+
 const getCardById = async (req, res) => {
     try {
         const { id } = req.params;
         if (!mongoose.Types.ObjectId.isValid(id)) {
-            return res.status(400).json({ error: 'Invalid deck id' });
+            return res.status(400).json({ error: 'Invalid card id' });
         }
 
         const card = await Card.findById(id);
@@ -47,13 +45,13 @@ const getCardById = async (req, res) => {
 };
 
 /**
- * Delete a deck by id.
+ * Delete a card by id.
  */
 const deleteCard = async (req, res) => {
     try {
         const { id } = req.params;
         if (!mongoose.Types.ObjectId.isValid(id)) {
-            return res.status(400).json({ error: 'Invalid deck id' });
+            return res.status(400).json({ error: 'Invalid card id' });
         }
 
         const deleted = await Card.findByIdAndDelete(id);
