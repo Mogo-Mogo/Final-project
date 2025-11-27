@@ -10,7 +10,7 @@ const router = express.Router();
 
 router.get('/', getAllCards);
 router.get('/:id', getCardById);
-router.post('/', createCard);
+router.put('/:id', createCard);
 router.delete('/:id', deleteCard);
 
 export default router;
