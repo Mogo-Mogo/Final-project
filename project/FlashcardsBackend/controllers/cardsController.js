@@ -3,7 +3,7 @@ import { Card } from '../models/Card.js';
 
 export const  createCard = async (req, res) => {
     try {
-        const { deckId } = req.params.;
+        const { deckId } = req.params.deckId;
         }
 
         const card = await Card.create({ title: title.trim() });
