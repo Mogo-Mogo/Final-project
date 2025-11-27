@@ -20,8 +20,8 @@ const createCard = async (req, res) => {
  */
 const getAllCards = async (req, res) => {
     try {
-        const decks = await Deck.find().sort({ createdAt: -1 });
-        return res.status(200).json(decks);
+        const cards = await Card.find().sort({ createdAt: -1 });
+        return res.status(200).json(cards);
     } catch (err) {
         return res.status(500).json({ error: err.message });
     }
@@ -30,19 +30,19 @@ const getAllCards = async (req, res) => {
 /**
  * Get a single deck by id.
  */
-const getDeckById = async (req, res) => {
+const getCardById = async (req, res) => {
     try {
         const { id } = req.params;
         if (!mongoose.Types.ObjectId.isValid(id)) {
             return res.status(400).json({ error: 'Invalid deck id' });
         }
 
-        const deck = await Deck.findById(id);
-        if (!deck) {
-            return res.status(404).json({ error: 'Deck not found' });
+        const card = await Card.findById(id);
+        if (!card) {
+            return res.status(404).json({ error: 'Card not found' });
         }
 
-        return res.status(200).json(deck);
+        return res.status(200).json(card);
     } catch (err) {
         return res.status(500).json({ error: err.message });
     }
