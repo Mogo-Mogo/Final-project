@@ -51,7 +51,7 @@ export const getCardsByDeck = async (req, res) => {
             return res.status(400).json({ error: 'Invalid deck id' });
         }
 
-        const cards = await Card.find({ deck: deckId }).sort({ createdAt: -1 });
+        const cards = await Card.find({ deckId: deckId }).sort({ createdAt: -1 });
         return res.status(200).json(cards);
     } catch (err) {
         return res.status(500).json({ error: err.message });
