@@ -80,6 +80,8 @@ export const updateCard = async (req, res) => {
     }
 };
 
+export const favoriteCard = async (req, res) => {
+
 export const deleteCard = async (req, res) => {
     try {
         const { id } = req.params;
