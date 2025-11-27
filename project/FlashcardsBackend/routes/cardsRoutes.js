@@ -10,8 +10,8 @@ const router = express.Router();
 
 router.get('/', getAllCards);
 router.get('/:cardId', getCardById);
-router.put('/:id', updateCard);
-router.delete('/:id', deleteCard);
-router.patch('/:id', updateCard);
+router.put('/:cardId', updateCard);
+router.delete('/:cardId', deleteCard);
+router.patch('/:cardId/favorite', favoriteCard);
 
 export default router;
