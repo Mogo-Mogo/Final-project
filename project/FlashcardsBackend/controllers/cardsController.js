@@ -91,7 +91,7 @@ export const favoriteCard = async (req, res) => {
                 id,
                 { $set: { isFavorite: true } },
                 { new: true }
-            return res.status(200).json(updated);
+            )
             return res.status(200).json(updated);
     }
         else {
@@ -99,7 +99,8 @@ export const favoriteCard = async (req, res) => {
                 id,
                 { $set: { isFavorite: false } },
                 { new: true }
-            );
+            )
+                   return res.status(200).json(updated);;
         }
         if (!updated) {
             return res.status(404).json({ error: 'Card not found' });
