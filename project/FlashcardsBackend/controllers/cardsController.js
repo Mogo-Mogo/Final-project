@@ -4,7 +4,7 @@ import { Card } from '../models/Card.js';
 export const  createCard = async (req, res) => {
     try {
         const { deckId } = req.params.deckId;
-        const card = await Card.create({ title: title.trim() });
+        const card = await Card.create({ deckId: deckId });
         return res.status(201).json(card);
     } catch (err) {
         return res.status(500).json({ error: err.message });
