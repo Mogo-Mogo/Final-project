@@ -44,7 +44,7 @@ export const getCardById = async (req, res) => {
     }
 };
 
-const deleteCard = async (req, res) => {
+export const deleteCard = async (req, res) => {
     try {
         const { id } = req.params;
         if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -60,11 +60,4 @@ const deleteCard = async (req, res) => {
     } catch (err) {
         return res.status(500).json({ error: err.message });
     }
-};
-
-module.exports = {
-    createCard,
-    getAllCards,
-    getCardById,
-    deleteCard,
 };
