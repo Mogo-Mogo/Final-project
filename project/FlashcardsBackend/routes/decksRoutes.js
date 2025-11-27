@@ -8,9 +8,9 @@ import {
 
 const router = express.Router();
 
-router.get('/', getAllCards);
-router.get('/:id', getCardById);
-router.post('/', createCard);
-router.delete('/:id', deleteCard);
+router.get('/', getAllDecks);
+router.get('/:id', getDeckById);
+router.post('/', createDeck);
+router.delete('/:id', deleteDeck);
 
 export default router;
