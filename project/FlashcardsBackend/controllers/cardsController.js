@@ -3,7 +3,7 @@ import { Card } from '../models/Card.js';
 
 export const  createCard = async (req, res) => {
     try {
-        const { title } = req.title;
+        const { question } = req.body;
         if (!title || typeof title !== 'string' || !title.trim()) {
             return res.status(400).json({ error: 'Title is required' });
         }
