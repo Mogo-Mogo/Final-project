@@ -67,7 +67,7 @@ export const updateCard = async (req, res) => {
         const updated = await Card.findByIdAndUpdate(
             id,
             { $set: req.body },
-            { new: true, runValidators: true }
+            { new: true}
         );
 
         if (!updated) {
