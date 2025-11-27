@@ -86,7 +86,7 @@ export const favoriteCard = async (req, res) => {
         if (!mongoose.Types.ObjectId.isValid(id)) {
             return res.status(400).json({ error: 'Invalid card id' });
         }
-        if (!updated) {
+        if (!Card.findById(id)) {
             return res.status(404).json({ error: 'Card not found' });
         }
         if (!Card.findById(id).isFavorite) {
