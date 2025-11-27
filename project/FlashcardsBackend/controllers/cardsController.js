@@ -100,12 +100,11 @@ export const favoriteCard = async (req, res) => {
                 { new: true }
             );
         }
-
         if (!updated) {
             return res.status(404).json({ error: 'Card not found' });
         }
 
-        return res.status(200).json(updated);
+ 
     } catch (err) {
         return res.status(500).json({ error: err.message });
     }
