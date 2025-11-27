@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import 'dotenv/config';
 import express from 'express';
-import cardsRoutes from './routes/notes.js';
+import cardsRoutes from './routes/cardsRoutes.js';
 async function connectDB() {
     try {
         await mongoose.connect("mongodb+srv://mosesgordon_db_user:mUiUAz8hW3uRQ9V2@cluster0.f4avlus.mongodb.net/?appName=Cluster0");
