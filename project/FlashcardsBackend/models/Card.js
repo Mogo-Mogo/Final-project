@@ -6,3 +6,4 @@ const cardSchema = new mongoose.Schema({
     isFavorite: { type: Boolean, default: false },
     createdAt: { type: Date, default: Date.now },
 });
+export const Card = mongoose.model("Card", cardSchema);
