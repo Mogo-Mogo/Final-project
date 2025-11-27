@@ -1,10 +1,10 @@
 import express from 'express';
 import {
-  createCard,
-  getAllCards,
-  getCardById,
-  deleteCard,
-} from '../controllers/cardsController.js';
+  createDeck,
+  getAllDecks,
+  getDeckById,
+  deleteDeck,
+} from '../controllers/decksController.js';
 
 const router = express.Router();
 
