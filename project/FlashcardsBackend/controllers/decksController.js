@@ -19,10 +19,7 @@ export const createDeck = async (req, res) => {
     }
 };
 
-/**
- * Get all decks.
- */
-const getAllDecks = async (req, res) => {
+export const getAllDecks = async (req, res) => {
     try {
         const decks = await Deck.find().sort({ createdAt: -1 });
         return res.status(200).json(decks);
@@ -34,7 +31,7 @@ const getAllDecks = async (req, res) => {
 /**
  * Get a single deck by id.
  */
-const getDeckById = async (req, res) => {
+export const getDeckById = async (req, res) => {
     try {
         const { id } = req.params;
         if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -52,10 +49,7 @@ const getDeckById = async (req, res) => {
     }
 };
 
-/**
- * Delete a deck by id.
- */
-const deleteDeck = async (req, res) => {
+export const deleteDeck = async (req, res) => {
     try {
         const { id } = req.params;
         if (!mongoose.Types.ObjectId.isValid(id)) {
