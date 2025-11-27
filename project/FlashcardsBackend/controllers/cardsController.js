@@ -91,7 +91,8 @@ export const favoriteCard = async (req, res) => {
                 id,
                 { $set: { isFavorite: true } },
                 { new: true }
-            )
+            return res.status(200).json(updated);
+            return res.status(200).json(updated);
     }
         else {
             const updated = await Card.findByIdAndUpdate(
@@ -103,8 +104,6 @@ export const favoriteCard = async (req, res) => {
         if (!updated) {
             return res.status(404).json({ error: 'Card not found' });
         }
-
- 
     } catch (err) {
         return res.status(500).json({ error: err.message });
     }
