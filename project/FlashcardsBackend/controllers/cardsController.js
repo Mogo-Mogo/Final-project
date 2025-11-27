@@ -44,6 +44,20 @@ export const getCardById = async (req, res) => {
     }
 };
 
+export const getCardsByDeck = async (req, res) => {
+    try {
+        const { deckId } = req.params;
+        if (!mongoose.Types.ObjectId.isValid(deckId)) {
+            return res.status(400).json({ error: 'Invalid deck id' });
+        }
+
+        const cards = await Card.find({ deck: deckId }).sort({ createdAt: -1 });
+        return res.status(200).json(cards);
+    } catch (err) {
+        return res.status(500).json({ error: err.message });
+    }
+};
+
 export const deleteCard = async (req, res) => {
     try {
         const { id } = req.params;
