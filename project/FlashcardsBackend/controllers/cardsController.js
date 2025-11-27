@@ -87,11 +87,12 @@ export const favoriteCard = async (req, res) => {
             return res.status(400).json({ error: 'Invalid card id' });
         }
         if (!Card.findById(id).isFavorite) {
-        const updated = await Card.findByIdAndUpdate(
-            id,
-            { $set: { isFavorite: true } },
-            { new: true }
-        ) 
+            const updated = await Card.findByIdAndUpdate(
+                id,
+                { $set: { isFavorite: true } },
+                { new: true }
+            )
+    }
         else {
             const updated = await Card.findByIdAndUpdate(
                 id,
