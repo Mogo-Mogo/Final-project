@@ -5,7 +5,7 @@ export default function TabLayout() {
      <Tabs>
       <Tabs.Screen
         name="decks"
-        options={{
+        options={
           href: '/decks'
           ,
         }}
