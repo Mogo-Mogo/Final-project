@@ -4,7 +4,7 @@ export default function DecksLayout() {
   return (
     <Tabs>
       <Tabs.Screen name="decks" options={{ title: 'Decks' }} />
-      <Tabs.Screen name="settings" options={{ title: 'Settings' }} />
+      <Tabs.Screen name="settings" options={{ title: 'Study' }} />
     </Tabs>
   );
 }
