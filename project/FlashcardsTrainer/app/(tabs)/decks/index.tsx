@@ -5,15 +5,6 @@ export default function Page() {
   return (
     <View style={styles.container}>
       <Text>Index page of Home Tab</Text>
-      <Tabs>
-        <Tabs.Screen
-          name="decks"
-          options={{
-            title: 'Decks',
-            href: '/decks/index'
-          }}
-        />
-      </Tabs>
     </View>
     
   );
