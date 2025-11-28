@@ -6,9 +6,8 @@ export default function TabLayout() {
       <Tabs.Screen
         name="decks"
         options={{
-          // Ensure the tab always links to the same href.
-          href: '/evanbacon',
-          },
+          href: '/decks'
+          ,
         }}
       />
     </Tabs>
