@@ -4,7 +4,7 @@ export default function TabLayout() {
   return (
      <Tabs>
       <Tabs.Screen
-        name="[user]"
+        name="decks"
         options={{
           // Ensure the tab always links to the same href.
           href: '/evanbacon',
