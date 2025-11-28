@@ -1,6 +1,6 @@
 import { Tabs } from 'expo-router';
 
-export default function Layout() {
+export default function DecksLayout() {
   return (
     <Tabs>
       <Tabs.Screen name="decks" options={{ title: 'Decks' }} />
