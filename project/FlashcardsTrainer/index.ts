@@ -1,6 +1,6 @@
 import { registerRootComponent } from 'expo';
 
-import App from 'project/FlashcardsTrainer/app/(tabs)/(decks)/index.tsx';
+import App from './app/(tabs)/(decks)/index.tsx';
 
 // registerRootComponent calls AppRegistry.registerComponent('main', () => App);
 // It also ensures that whether you load the app in Expo Go or in a native build,
