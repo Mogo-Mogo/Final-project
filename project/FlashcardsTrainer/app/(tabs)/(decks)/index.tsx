@@ -4,7 +4,16 @@ import { Tabs } from 'expo-router';
 export default function Page() {
   return (
     <Text>Index page of Home Tab</Text>
-    
+    <Tabs>
+        <Tabs.Screen
+          name="decks"
+          options={{
+            title: 'Decks',
+            href: '/decks'
+          }}
+        />
+
+      </Tabs>
   );
 }
 
