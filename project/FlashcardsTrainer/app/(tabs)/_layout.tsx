@@ -10,15 +10,9 @@ export default function TabLayout() {
           // Ensure the tab always links to the same href.
           href: '/evanbacon',
           // OR you can use the href object.
-          href: {
-            pathname: '/[user]',
-            params: {
-              user: 'evanbacon',
-            },
           },
         }}
       />
-    </Tabs>
     </Tabs>
   );
 }
