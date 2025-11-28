@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function Page() {
   return (
     <View style={styles.container}>
-      <Text>IJadfasdijfhaohjsdf</Text>
+      <Text>Its not working :9</Text>
     </View>
     
   );
