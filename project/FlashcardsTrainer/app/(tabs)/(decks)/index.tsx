@@ -2,9 +2,9 @@ import { View, Text, StyleSheet } from 'react-native';
 import { Tabs } from 'expo-router';
 
 export default function Page() {
-  return <Text>Index page of Home Tab</Text>;
-  
-}
+  return {
+
+  }}
 
 export function Tab() {
   return (
