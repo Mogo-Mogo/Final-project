@@ -6,8 +6,8 @@ export default function TabLayout() {
         <Tabs.Screen
         name="decks"
         options={{
-            tabBarLabel: "Home",
-            title: "Home"
+            tabBarLabel: "Decks",
+            title: "Decks"
         }}
       />
     </Tabs>
