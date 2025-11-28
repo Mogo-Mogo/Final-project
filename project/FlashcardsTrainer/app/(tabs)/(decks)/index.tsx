@@ -9,7 +9,7 @@ export function Tab() {
   return (
     <View style={styles.container}>
       <Text>Tab [Home|Settings]</Text>
-
+      <Tabs />
     </View>
   );
 }
