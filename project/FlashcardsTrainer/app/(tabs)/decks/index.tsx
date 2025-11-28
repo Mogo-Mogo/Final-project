@@ -9,13 +9,6 @@ export default function Page() {
   );
 }
 
-export function Tab() {
-  return (
-    <View style={styles.container}>
-      <Text>Tab [Home|Settings]</Text>
-    </View>
-  );
-}
 
 const styles = StyleSheet.create({
   container: {
