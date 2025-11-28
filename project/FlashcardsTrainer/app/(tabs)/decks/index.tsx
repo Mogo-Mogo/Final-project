@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function Page() {
   return (
     <View style={styles.container}>
-      <Text>Index page of Home Tab</Text>
+      <Text>IJadfasdijfhaohjsdf</Text>
     </View>
     
   );
