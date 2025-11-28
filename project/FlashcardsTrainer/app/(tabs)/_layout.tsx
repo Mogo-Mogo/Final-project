@@ -1,10 +1,6 @@
-import { Tabs } from 'expo-router';
+import { Slot } from 'expo-router';
 
-export default function Layout() {
-  return (
-    <Tabs>
-      <Tabs.Screen name="decks" options={{ title: 'Decks' }} />
-      <Tabs.Screen name="settings" options={{ title: 'Settings' }} />
-    </Tabs>
-  );
+export default function DecksLayout() {
+  // ensure the parent Tabs can render; keep this file minimal
+  return <Slot />;
 }
