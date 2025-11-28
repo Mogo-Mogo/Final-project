@@ -1,7 +1,5 @@
 import { View, Text, StyleSheet } from 'react-native';
 
-import { Text } from 'react-native';
-
 export default function Page() {
   return <Text>Index page of Home Tab</Text>;
 }
