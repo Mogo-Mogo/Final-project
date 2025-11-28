@@ -8,7 +8,6 @@ export default function TabLayout() {
         options={{
           // Ensure the tab always links to the same href.
           href: '/evanbacon',
-          // OR you can use the href object.
           },
         }}
       />
