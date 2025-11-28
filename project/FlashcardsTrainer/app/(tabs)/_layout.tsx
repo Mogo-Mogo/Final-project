@@ -8,7 +8,6 @@ export default function TabLayout() {
         options={{
           title: 'Decks',
           href: '/decks'
-  
         }}
       />
     </Tabs>
