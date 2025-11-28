@@ -3,7 +3,7 @@ import { Tabs } from 'expo-router';
 
 export default function Page() {
   return (
-<Text>Index page of Home Tab</Text>
+    <Text>Index page of Home Tab</Text>
   );
 }
 
