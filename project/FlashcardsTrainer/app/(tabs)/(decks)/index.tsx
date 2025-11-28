@@ -5,15 +5,15 @@ export default function Page() {
   return (
     <div>
       <Text>Index page of Home Tab</Text>
-    <Tabs>
-        <Tabs.Screen
-          name="decks"
-          options={{
-            title: 'Decks',
-            href: '/decks/index'
-          }}
-        />
-      </Tabs>
+        <Tabs>
+          <Tabs.Screen
+            name="decks"
+            options={{
+              title: 'Decks',
+              href: '/decks/index'
+            }}
+          />
+        </Tabs>
     </div>
     
   );
