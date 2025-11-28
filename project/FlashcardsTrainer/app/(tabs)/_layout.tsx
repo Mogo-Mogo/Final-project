@@ -5,9 +5,10 @@ export default function TabLayout() {
      <Tabs>
       <Tabs.Screen
         name="decks"
-        options={
+        options={{
+          title: 'Decks',
           href: '/decks'
-          ,
+  
         }}
       />
     </Tabs>
