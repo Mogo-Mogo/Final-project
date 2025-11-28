@@ -3,7 +3,7 @@ import { Tabs } from 'expo-router';
 
 export default function Page() {
   return (
-    <div>
+    <view>
       <Text>Index page of Home Tab</Text>
       <Tabs>
         <Tabs.Screen
@@ -14,7 +14,7 @@ export default function Page() {
           }}
         />
       </Tabs>
-    </div>
+    </view>
     
   );
 }
