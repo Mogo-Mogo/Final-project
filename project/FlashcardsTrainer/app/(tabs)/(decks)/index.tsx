@@ -10,7 +10,7 @@ export default function Page() {
           name="decks"
           options={{
             title: 'Decks',
-            href: '/index'
+            href: '/decks/index'
           }}
         />
       </Tabs>
