@@ -10,6 +10,13 @@ export function Tab() {
     <View style={styles.container}>
       <Text>Tab [Home|Settings]</Text>
       <Tabs>
+        <Tabs.Screen
+          name="decks"
+          options={{
+            title: 'Decks',
+            href: '/decks'
+          }}
+        />
 
       </Tabs>
     </View>
