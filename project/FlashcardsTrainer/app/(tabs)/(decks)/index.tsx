@@ -3,8 +3,8 @@ import { Tabs } from 'expo-router';
 
 export default function Page() {
   return (
-    <div
-    <Text>Index page of Home Tab</Text>
+    <div>
+      <Text>Index page of Home Tab</Text>
     <Tabs>
         <Tabs.Screen
           name="decks"
@@ -15,6 +15,8 @@ export default function Page() {
         />
 
       </Tabs>
+    </div>
+    
   );
 }
 
