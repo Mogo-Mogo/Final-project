@@ -1,5 +1,4 @@
 import { View, Text, StyleSheet } from 'react-native';
-import { Tabs } from 'expo-router';
 
 export default function Page() {
   return (
