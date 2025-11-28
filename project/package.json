@@ -4,5 +4,9 @@
     "expo": "^54.0.25",
     "express": "^5.1.0",
     "mongoose": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "~19.1.10",
+    "typescript": "~5.9.2"
   }
 }
