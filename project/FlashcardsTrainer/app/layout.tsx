@@ -1,13 +1,4 @@
 import { Stack } from "expo-router";
-import { Stack } from 'expo-router';
-
-export default function Layout() {
-  return (
-    <Stack>
-      
-    </Stack>
-  );
-}
 
 export default function RootLayout() {
   return (
@@ -20,6 +11,7 @@ export default function RootLayout() {
         name="(modals)/create-card"
         options={{ presentation: "modal", title: "New Card" }}
       />
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
     </Stack>
   );
 }
