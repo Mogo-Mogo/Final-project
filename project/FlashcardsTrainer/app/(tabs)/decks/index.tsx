@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function Page() {
   return (
     <View style={styles.container}>
-      <Text>Its not working :(</Text>
+      <Text>this is the decks.index page</Text>
     </View>
     
   );
