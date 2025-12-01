@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
     res.json({ message: 'Flashcards Backend API' });
 });
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/flashcards';
+const MONGODB_URI = process.env.MONGOURI || 'mongodb://localhost:27017/flashcards';
 
 mongoose.connect(MONGODB_URI)
     .then(() => {
