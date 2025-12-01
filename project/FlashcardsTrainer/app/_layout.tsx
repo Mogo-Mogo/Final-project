@@ -15,7 +15,6 @@ export default function RootLayout() {
         name="(modals)/create-deck"
         options={{ presentation: "modal", title: "New Deck" }}
       />
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
     </Stack>
     
   );
