@@ -27,10 +27,8 @@
       "favicon": "./assets/favicon.png",
       "bundler": "metro"
     },
-    {
-  "expo": {
-    "scheme": "your-app-name"
-  }
-}
-  }
+    "expo": {
+        scheme": "your-app-name"
+      }
+    }"
 }
