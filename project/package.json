@@ -6,6 +6,7 @@
     "express": "^5.2.1",
     "mongoose": "^9.0.0"
   },
+  "type": "module",
   "devDependencies": {
     "@types/react": "~19.1.10",
     "typescript": "~5.9.2"
