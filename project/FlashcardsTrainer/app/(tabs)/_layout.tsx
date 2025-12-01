@@ -2,7 +2,7 @@ import { Tabs } from 'expo-router';
 
 export default function TabsLayout() {
   return (
-        <Tabs>
+    <Tabs>
       <Tabs.Screen name="decks" options={{ title: 'decks'}} />
       <Tabs.Screen name="study" options={{ title: 'study'}} />
     </Tabs>
