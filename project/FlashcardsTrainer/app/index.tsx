@@ -2,5 +2,5 @@
 import { Redirect } from 'expo-router';
 
 export default function Page() {
-  return <Redirect href={"/(tabs)/study.tsx"} />;
+  return <Redirect href={"/(tabs)/study"} />;
 }
