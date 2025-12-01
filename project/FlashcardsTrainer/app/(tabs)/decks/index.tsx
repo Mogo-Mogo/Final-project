@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function DeckPage() {
   return (
     <View style={styles.container}>
-      <Text>this is the decks.index page for some reason</Text>
+      <Text>Make a new dec</Text>
     </View>
     
   );
