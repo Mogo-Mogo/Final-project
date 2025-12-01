@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function CreateCardPage() {
   return (
     <View style={styles.container}>
-      <Text>Create Card page</Text>
+      <Text>Create Card</Text>
     </View>
   );
 }
