@@ -3,7 +3,7 @@ import { Card } from '../models/Card.js';
 
 export const createCard = async (req, res) => {
     try {
-        const { deckId } = req.params.deckId;
+        const { deckId } = req.params;
         if (!mongoose.Types.ObjectId.isValid(deckId)) {
             return res.status(400).json({ error: 'Invalid deck id' });
         }
@@ -45,7 +45,7 @@ export const getCardById = async (req, res) => {
 
 export const getCardsByDeck = async (req, res) => {
     try {
-        const { deckId } = req.params.deckId;
+        const { deckId } = req.params;
         if (!mongoose.Types.ObjectId.isValid(deckId)) {
             return res.status(400).json({ error: 'Invalid deck id' });
         }
