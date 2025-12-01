@@ -1,7 +1,8 @@
-import { Stack } from "expo-router";
+import { Stack, Tabs } from "expo-router";
 
 export default function RootLayout() {
   return (
+    <view
     <Stack>
       <Stack.Screen
         name="(modals)/create-deck"
@@ -13,7 +14,7 @@ export default function RootLayout() {
       />
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
     </Stack>
-        <Tabs>
+    <Tabs>
       <Tabs.Screen name="decks" options={{ title: 'decks'}} />
       <Tabs.Screen name="study" options={{ title: 'study'}} />
     </Tabs>
