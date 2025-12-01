@@ -24,6 +24,9 @@ export default function CreateDeckPage() {
     }
   };
 
+  // Replace with the correct Codespace URL for port 3000
+  const BACKEND_URL = 'https://ubiquitous-journey-wrrp96vxrggpfgjqg-3000.app.github.dev';
+
   const createDeck = async () => {
     if (!deckTitle.trim()) {
       Alert.alert('Error', 'Please enter a deck title');
@@ -42,9 +45,6 @@ export default function CreateDeckPage() {
     setLoading(true);
 
     try {
-      // Use the Codespace backend URL instead of localhost
-      const BACKEND_URL = 'https://ubiquitous-journey-wrrp96vxrggpfgjqg-3000.app.github.dev';
-      
       // Create deck first
       const deckResponse = await fetch(`${BACKEND_URL}/api/decks`, {
         method: 'POST',
@@ -55,7 +55,9 @@ export default function CreateDeckPage() {
       });
 
       if (!deckResponse.ok) {
-        throw new Error('Failed to create deck');
+        const errorData = await deckResponse.text();
+        console.error('Backend error:', deckResponse.status, errorData);
+        throw new Error(`Failed to create deck: ${deckResponse.status}`);
       }
 
       const deck = await deckResponse.json();
