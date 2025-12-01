@@ -26,8 +26,8 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "expo": {
-      "scheme": "FlashcardsTrainer"
-    }
+      "web": {
+    "bundler": "metro"
+  }
   }
 }
