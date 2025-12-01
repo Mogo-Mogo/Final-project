@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet } from 'react-native';
 
-export default function StudyPage() {
+export default function CardPage() {
   return (
     <View style={styles.container}>
-      <Text>Study page</Text>
+      <Text>Create Card page</Text>
     </View>
   );
 }
