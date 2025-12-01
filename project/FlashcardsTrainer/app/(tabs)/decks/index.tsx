@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
 
-export default function HomePage() {
+export default function DecksPage() {
   return (
     <View style={styles.container}>
       <Text>this is the decks.index page for some reason</Text>
