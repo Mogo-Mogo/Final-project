@@ -26,5 +26,8 @@
     "web": {
       "favicon": "./assets/favicon.png"
     }
+      "expo": {
+    "scheme": "your-app-name"
+  }
   }
 }
