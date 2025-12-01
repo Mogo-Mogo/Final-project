@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 
 const MONGODB_URI = process.env.MONGOURI || 'mongodb+srv://mosesgordon_db_user:mUiUAz8hW3uRQ9V2@cluster0.f4avlus.mongodb.net/?appName=Cluster0';
 
-mongoose.connect(MONGODB_URI)
+/*mongoose.connect(MONGODB_URI)
     .then(() => {
         console.log('Connected to MongoDB');
     })
@@ -38,7 +38,7 @@ mongoose.connect(MONGODB_URI)
         process.exit(1);
     });
 
-// Start server
+// Start server*/
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running on http://localhost:${PORT}`);
