@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function DeckPage() {
   return (
     <View style={styles.container}>
-      <Text>Deck page</Text>
+      <Text>Create Deck page</Text>
     </View>
   );
 }
