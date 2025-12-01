@@ -28,7 +28,7 @@
       "bundler": "metro"
     },
     "expo": {
-        scheme": "your-app-name"
+        "scheme": "FlashcardsTrainer"
       }
-    }"
+    }
 }
