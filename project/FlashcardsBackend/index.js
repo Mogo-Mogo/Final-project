@@ -47,7 +47,7 @@ app.listen(PORT, '0.0.0.0', () => {
     console.log('  GET /api/decks');
 });*/
 
-import express from 'express';
+/*import express from 'express';
 
 const app = express();
 
@@ -59,5 +59,5 @@ app.get('/', (req, res) => {
 const PORT = 3001;
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Test server running on port ${PORT}`);
-});
+});*/
 
