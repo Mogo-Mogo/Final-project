@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
 
-export default function DeckPage() {
+export default function CreateDeckPage() {
   return (
     <View style={styles.container}>
       <Text>Create Deck page</Text>
