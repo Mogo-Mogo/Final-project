@@ -25,9 +25,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "expo": {
+      "scheme": "FlashcardsTrainer"
     }
-      "expo": {
-    "scheme": "your-app-name"
-  }
   }
 }
