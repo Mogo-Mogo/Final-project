@@ -4,7 +4,7 @@ export default function RootLayout() {
   return (
     <Stack>
       <Stack.Screen
-        name="(modals)/create-card"
+        name="(tabs)/decks"
         options={{ presentation: "modal", title: "New Card" }}
       />
       <Stack.Screen
