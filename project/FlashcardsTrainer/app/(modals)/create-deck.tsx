@@ -42,8 +42,11 @@ export default function CreateDeckPage() {
     setLoading(true);
 
     try {
+      // Use the Codespace backend URL instead of localhost
+      const BACKEND_URL = 'https://ubiquitous-journey-wrrp96vxrggpfgjqg-3000.app.github.dev';
+      
       // Create deck first
-      const deckResponse = await fetch('http://localhost:3000/api/decks', {
+      const deckResponse = await fetch(`${BACKEND_URL}/api/decks`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -59,7 +62,7 @@ export default function CreateDeckPage() {
 
       // Create cards for the deck
       for (const card of validCards) {
-        const cardResponse = await fetch(`http://localhost:3000/api/decks/${deck._id}/cards`, {
+        const cardResponse = await fetch(`${BACKEND_URL}/api/decks/${deck._id}/cards`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
