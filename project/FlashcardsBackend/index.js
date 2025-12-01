@@ -1,4 +1,4 @@
-/*import express from 'express';
+import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import 'dotenv/config';
@@ -7,7 +7,7 @@ import cardsRoutes from './routes/cardsRoutes.js';
 import decksRoutes from './routes/decksRoutes.js'; 
 const app = express();
 
-app.use(cors({
+app.use(cors(/*{
   origin: ['https://ubiquitous-journey-wrrp96vxrggpfgjqg-8081.app.github.dev', 'http://localhost:8081'],
   credentials: true
 }));
@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 
 const MONGODB_URI = process.env.MONGOURI || 'mongodb+srv://mosesgordon_db_user:mUiUAz8hW3uRQ9V2@cluster0.f4avlus.mongodb.net/?appName=Cluster0';
 
-/*mongoose.connect(MONGODB_URI)
+mongoose.connect(MONGODB_URI)
     .then(() => {
         console.log('Connected to MongoDB');
     })
@@ -45,7 +45,7 @@ app.listen(PORT, '0.0.0.0', () => {
     console.log('Available endpoints:');
     console.log('  GET /api/cards');
     console.log('  GET /api/decks');
-});*/
+});
 
 /*import express from 'express';
 
