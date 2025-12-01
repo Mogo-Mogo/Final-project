@@ -8,7 +8,11 @@ import decksRoutes from './routes/decksRoutes.js';
 const app = express();
 
 app.use(cors({
-  origin: ['https://ubiquitous-journey-wrrp96vxrggpfgjqg-8081.app.github.dev', 'http://localhost:8081'],
+  origin: [
+    'https://ubiquitous-journey-wrrp96vxrggpfgjqg-8081.app.github.dev', 
+    'http://localhost:8081',
+    'exp://192.168.1.100:8081' // Add Expo dev server if needed
+  ],
   credentials: true
 }));
 app.use(express.json());
