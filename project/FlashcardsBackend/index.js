@@ -1,4 +1,4 @@
-import express from 'express';
+/*import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import 'dotenv/config';
@@ -38,12 +38,26 @@ const MONGODB_URI = process.env.MONGOURI || 'mongodb+srv://mosesgordon_db_user:m
         process.exit(1);
     });
 
-// Start server*/
+// Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running on http://localhost:${PORT}`);
     console.log('Available endpoints:');
     console.log('  GET /api/cards');
     console.log('  GET /api/decks');
+});*/
+
+import express from 'express';
+
+const app = express();
+
+app.get('/', (req, res) => {
+    console.log('Request received!');
+    res.json({ message: 'Test server works' });
+});
+
+const PORT = 3001;
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Test server running on port ${PORT}`);
 });
 
