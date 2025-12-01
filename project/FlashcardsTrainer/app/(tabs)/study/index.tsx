@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
 
-export default function StudyPage() {
+export default function Page() {
   return (
     <View style={styles.container}>
       <Text>Study page</Text>
