@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
 
-export default function CardPage() {
+export default function CreateCardPage() {
   return (
     <View style={styles.container}>
       <Text>Create Card page</Text>
