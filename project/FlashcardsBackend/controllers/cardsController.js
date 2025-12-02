@@ -86,25 +86,19 @@ export const favoriteCard = async (req, res) => {
         if (!mongoose.Types.ObjectId.isValid(id)) {
             return res.status(400).json({ error: 'Invalid card id' });
         }
-        if (!Card.findById(id)) {
+
+        const card = await Card.findById(id);
+        if (!card) {
             return res.status(404).json({ error: 'Card not found' });
         }
-        if (!Card.findById(id).isFavorite) {
-            const updated = await Card.findByIdAndUpdate(
-                id,
-                { $set: { isFavorite: true } },
-                { new: true }
-            )
-            return res.status(200).json(updated);
-    }
-        else {
-            const updated = await Card.findByIdAndUpdate(
-                id,
-                { $set: { isFavorite: false } },
-                { new: true }
-            )
-            return res.status(200).json(updated);
-        }
+
+        const updated = await Card.findByIdAndUpdate(
+            id,
+            { $set: { isFavorite: !card.isFavorite } },
+            { new: true }
+        );
+
+        return res.status(200).json(updated);
     } catch (err) {
         return res.status(500).json({ error: err.message });
     }
