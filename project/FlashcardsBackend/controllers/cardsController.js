@@ -82,6 +82,7 @@ export const updateCard = async (req, res) => {
 
 export const favoriteCard = async (req, res) => {
     try {
+        console.log('favoriteCard called with id:', req.params.id);
         const { id } = req.params;
         console.log('Finding card with id:', id);
         if (!mongoose.Types.ObjectId.isValid(id)) {
