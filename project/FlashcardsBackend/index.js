@@ -7,14 +7,7 @@ import cardsRoutes from './routes/cardsRoutes.js';
 import decksRoutes from './routes/decksRoutes.js'; 
 const app = express();
 
-app.use(cors({
-  origin: [
-    'https://ubiquitous-journey-wrrp96vxrggpfgjqg-8081.app.github.dev', 
-    'http://localhost:8081',
-    'exp://192.168.1.100:8081' 
-  ],
-  credentials: true
-}));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
