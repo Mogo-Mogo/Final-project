@@ -10,7 +10,7 @@ import {
 const router = express.Router();
 
 router.get('/', getAllCards);
-router.get('/:id', getCardById);
+router.get('/:cardId', getCardById);
 router.put('/:cardId', updateCard);
 router.delete('/:cardId', deleteCard);
 router.patch('/:cardId/favorite', favoriteCard);
