@@ -82,9 +82,7 @@ export const updateCard = async (req, res) => {
 
 export const favoriteCard = async (req, res) => {
     try {
-        console.log('favoriteCard called with id:', req.params.cardId);
         const { cardId } = req.params;
-        console.log('Finding card with id:', cardId);
         if (!mongoose.Types.ObjectId.isValid(cardId)) {
             return res.status(400).json({ error: 'Invalid card id' });
         }
