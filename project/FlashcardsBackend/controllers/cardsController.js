@@ -112,12 +112,12 @@ export const favoriteCard = async (req, res) => {
 
 export const deleteCard = async (req, res) => {
     try {
-        const { id } = req.params;
-        if (!mongoose.Types.ObjectId.isValid(id)) {
+        const { cardId } = req.params;
+        if (!mongoose.Types.ObjectId.isValid(cardId)) {
             return res.status(400).json({ error: 'Invalid card id' });
         }
 
-        const deleted = await Card.findByIdAndDelete(id);
+        const deleted = await Card.findByIdAndDelete(cardId);
         if (!deleted) {
             return res.status(404).json({ error: 'Card not found' });
         }
