@@ -24,7 +24,7 @@ export default function CreateDeckPage() {
     }
   };
 
-  const BACKEND_URL = 'https://ubiquitous-journey-wrrp96vxrggpfgjqg-3000.app.github.dev/';
+  const BACKEND_URL = 'https://ubiquitous-journey-wrrp96vxrggpfgjqg-3000.app.github.dev';
 
   const createDeck = async () => {
     if (!deckTitle.trim()) {
