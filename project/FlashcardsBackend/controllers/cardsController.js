@@ -105,7 +105,7 @@ export const favoriteCard = async (req, res) => {
 
         return res.status(200).json(updated);
     } catch (err) {
-        console.error('favoriteCard error:', err);
+ //       console.error('favoriteCard error:', err);
         return res.status(500).json({ error: err.message });
     }
 };
