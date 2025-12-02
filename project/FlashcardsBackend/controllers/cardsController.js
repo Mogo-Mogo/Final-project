@@ -59,13 +59,13 @@ export const getCardsByDeck = async (req, res) => {
 
 export const updateCard = async (req, res) => {
     try {
-        const { id } = req.params;
-        if (!mongoose.Types.ObjectId.isValid(id)) {
+        const { cardId } = req.params;
+        if (!mongoose.Types.ObjectId.isValid(cardId)) {
             return res.status(400).json({ error: 'Invalid card id' });
         }
 
         const updated = await Card.findByIdAndUpdate(
-            id,
+            cardId,
             { $set: req.body },
             { new: true, runValidators: true }
         );
