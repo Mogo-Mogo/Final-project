@@ -100,7 +100,7 @@ export const favoriteCard = async (req, res) => {
         console.log('Will set to:', !card.isFavorite);
 
         const updated = await Card.findByIdAndUpdate(
-            id,
+            cardId,
             { $set: { isFavorite: !card.isFavorite } },
             { new: true }
         );
