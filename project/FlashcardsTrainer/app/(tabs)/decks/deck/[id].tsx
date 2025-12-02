@@ -4,11 +4,26 @@ import { useState, useEffect } from 'react';
 
 const BACKEND_URL = 'https://ubiquitous-journey-wrrp96vxrggpfgjqg-3000.app.github.dev';
 
+interface Card {
+  _id: string;
+  question: string;
+  answer: string;
+  isFavorite: boolean;
+  deckId: string;
+  createdAt: string;
+}
+
+interface Deck {
+  _id: string;
+  title: string;
+  createdAt: string;
+}
+
 export default function DeckDetailPage() {
   const { id } = useLocalSearchParams();
   const router = useRouter();
-  const [deck, setDeck] = useState(null);
-  const [cards, setCards] = useState([]);
+  const [deck, setDeck] = useState<Deck | null>(null);
+  const [cards, setCards] = useState<Card[]>([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -21,14 +36,14 @@ export default function DeckDetailPage() {
       // Fetch deck info
       const deckResponse = await fetch(`${BACKEND_URL}/api/decks/${id}`);
       if (deckResponse.ok) {
-        const deckData = await deckResponse.json();
+        const deckData: Deck = await deckResponse.json();
         setDeck(deckData);
       }
 
       // Fetch cards in deck
       const cardsResponse = await fetch(`${BACKEND_URL}/api/decks/${id}/cards`);
       if (cardsResponse.ok) {
-        const cardsData = await cardsResponse.json();
+        const cardsData: Card[] = await cardsResponse.json();
         setCards(cardsData);
       }
     } catch (error) {
@@ -69,14 +84,14 @@ export default function DeckDetailPage() {
     );
   };
 
-  const toggleFavorite = async (cardId, currentFavorite) => {
+  const toggleFavorite = async (cardId: string, currentFavorite: boolean) => {
     try {
       const response = await fetch(`${BACKEND_URL}/api/cards/${cardId}/favorite`, {
         method: 'PATCH',
       });
       
       if (response.ok) {
-        const updatedCard = await response.json();
+        const updatedCard: Card = await response.json();
         setCards(prevCards => 
           prevCards.map(card => 
             card._id === cardId ? updatedCard : card
@@ -91,7 +106,7 @@ export default function DeckDetailPage() {
     }
   };
 
-  const renderCard = ({ item }) => (
+  const renderCard = ({ item }: { item: Card }) => (
     <View style={styles.cardContainer}>
       <View style={styles.cardContent}>
         <Text style={styles.cardLabel}>Q:</Text>
