@@ -84,12 +84,12 @@ export const favoriteCard = async (req, res) => {
     try {
         console.log('favoriteCard called with id:', req.params.id);
         const { cardId } = req.params;
-        console.log('Finding card with id:', id);
-        if (!mongoose.Types.ObjectId.isValid(id)) {
+        console.log('Finding card with id:', cardId);
+        if (!mongoose.Types.ObjectId.isValid(cardId)) {
             return res.status(400).json({ error: 'Invalid card id' });
         }
-        console.log('Finding card with id:', id);
-        const card = await Card.findById(id);
+        console.log('Finding card with id:', cardId);
+        const card = await Card.findById(cardId);
         console.log('Found card:', card);
         if (!card) {
             console.log('Card not found');
