@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, TouchableOpacity, FlatList, ActivityIndicator }
 import { useRouter, useFocusEffect } from 'expo-router';
 import { useState, useCallback } from 'react';
 
-const BACKEND_URL = 'https://ubiquitous-journey-wrrp96vxrggpfgjqg-3000.app.github.dev';
+const BACKEND_URL = process.env.BASE_URL ?? 'http://localhost:3000';
 
 export default function DeckPage() {
   const router = useRouter();
@@ -39,8 +39,8 @@ export default function DeckPage() {
   };
 
   const renderDeck = ({ item }) => (
-    <TouchableOpacity 
-      style={styles.deckCard} 
+    <TouchableOpacity
+      style={styles.deckCard}
       onPress={() => handleDeckPress(item._id)}
     >
       <Text style={styles.deckTitle}>{item.title}</Text>

@@ -32,7 +32,7 @@ export default function CreateDeckPage() {
       return;
     }
 
-    const validCards = cards.filter(card => 
+    const validCards = cards.filter(card =>
       card.question.trim() && card.answer.trim()
     );
 
@@ -94,7 +94,7 @@ export default function CreateDeckPage() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Create New Deck</Text>
-      
+
       <TextInput
         style={styles.input}
         placeholder="Deck Title"
@@ -103,11 +103,11 @@ export default function CreateDeckPage() {
       />
 
       <Text style={styles.sectionTitle}>Cards:</Text>
-      
+
       {cards.map((card, index) => (
         <View key={index} style={styles.cardContainer}>
           <Text style={styles.cardNumber}>Card {index + 1}</Text>
-          
+
           <TextInput
             style={styles.input}
             placeholder="Question"
@@ -115,7 +115,7 @@ export default function CreateDeckPage() {
             onChangeText={(value) => updateCard(index, 'question', value)}
             multiline
           />
-          
+
           <TextInput
             style={styles.input}
             placeholder="Answer"
@@ -123,9 +123,9 @@ export default function CreateDeckPage() {
             onChangeText={(value) => updateCard(index, 'answer', value)}
             multiline
           />
-          
+
           {cards.length > 1 && (
-            <TouchableOpacity 
+            <TouchableOpacity
               style={styles.removeButton}
               onPress={() => removeCard(index)}
             >
@@ -139,8 +139,8 @@ export default function CreateDeckPage() {
         <Text style={styles.buttonText}>Add Another Card</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity 
-        style={[styles.createButton, loading && styles.disabledButton]} 
+      <TouchableOpacity
+        style={[styles.createButton, loading && styles.disabledButton]}
         onPress={createDeck}
         disabled={loading}
       >

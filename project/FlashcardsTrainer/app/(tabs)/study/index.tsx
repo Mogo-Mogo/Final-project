@@ -2,8 +2,7 @@ import { View, Text, StyleSheet, FlatList, ActivityIndicator, TouchableOpacity }
 import { useState, useCallback } from 'react';
 import { useFocusEffect } from 'expo-router';
 
-const BACKEND_URL = 'https://ubiquitous-journey-wrrp96vxrggpfgjqg-3000.app.github.dev';
-
+const BACKEND_URL = process.env.BASE_URL ?? 'http://localhost:3000';
 interface Card {
   _id: string;
   question: string;
@@ -54,9 +53,9 @@ export default function StudyPage() {
 
   const renderCard = ({ item }: { item: Card }) => {
     const isFlipped = flippedCards.has(item._id);
-    
+
     return (
-      <TouchableOpacity 
+      <TouchableOpacity
         style={styles.cardContainer}
         onPress={() => toggleCardFlip(item._id)}
       >
@@ -64,7 +63,7 @@ export default function StudyPage() {
           <Text style={styles.favoriteIcon}>★</Text>
           <Text style={styles.flipHint}>Tap to flip</Text>
         </View>
-        
+
         <View style={styles.cardContent}>
           <Text style={styles.cardLabel}>
             {isFlipped ? 'Answer:' : 'Question:'}
@@ -73,7 +72,7 @@ export default function StudyPage() {
             {isFlipped ? item.answer : item.question}
           </Text>
         </View>
-        
+
         <View style={styles.cardFooter}>
           <Text style={styles.cardStatus}>
             {isFlipped ? 'Showing Answer' : 'Showing Question'}

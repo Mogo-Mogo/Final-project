@@ -2,9 +2,11 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
-    "expo": "^54.0.25",
+    "expo": "^54.0.27",
+    "expo-router": "^6.0.17",
     "express": "^5.2.1",
-    "mongoose": "^9.0.0"
+    "mongoose": "^9.0.1",
+    "react": "^19.2.1"
   },
   "type": "module",
   "devDependencies": {

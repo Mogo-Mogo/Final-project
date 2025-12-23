@@ -4,7 +4,8 @@ import cors from 'cors';
 import 'dotenv/config';
 
 import cardsRoutes from './routes/cardsRoutes.js';
-import decksRoutes from './routes/decksRoutes.js'; 
+import decksRoutes from './routes/decksRoutes.js';
+//require('dotenv').config();
 const app = express();
 
 app.use(cors());
@@ -43,18 +44,4 @@ app.listen(PORT, '0.0.0.0', () => {
     console.log('  GET /api/cards');
     console.log('  GET /api/decks');
 });
-
-/*import express from 'express';
-
-const app = express();
-
-app.get('/', (req, res) => {
-    console.log('Request received!');
-    res.json({ message: 'Test server works' });
-});
-
-const PORT = 3001;
-app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Test server running on port ${PORT}`);
-});*/
 
