@@ -3,5 +3,5 @@ import { View, Text } from 'react-native';
 
 
 export default function App() {
-  return <Redirect href={"/(tabs)/study"} />;
+  return <Redirect href={"/(tabs)/tasks"} />;
 }

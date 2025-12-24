@@ -5,17 +5,17 @@ export default function RootLayout() {
     <Stack>
       <Stack.Screen
         name="(tabs)"
-        options={{ presentation: "modal", title: "Your decks" }}
+        options={{ presentation: "modal", title: "Your Tasks" }}
       />
       <Stack.Screen
-        name="(modals)/create-card"
-        options={{ presentation: "modal", title: "New Card" }}
+        name="(modals)/create-task"
+        options={{ presentation: "modal", title: "New Task" }}
       />
       <Stack.Screen
-        name="(modals)/create-deck"
-        options={{ presentation: "modal", title: "New Deck" }}
+        name="(modals)/create-event"
+        options={{ presentation: "modal", title: "New Event" }}
       />
     </Stack>
-    
+
   );
 }

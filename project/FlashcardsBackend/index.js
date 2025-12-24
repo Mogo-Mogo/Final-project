@@ -3,8 +3,8 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import 'dotenv/config';
 
-import cardsRoutes from './routes/cardsRoutes.js';
-import decksRoutes from './routes/decksRoutes.js';
+import tasksRoutes from './routes/tasksRoutes.js';
+import eventsRoutes from './routes/eventsRoutes.js';
 //require('dotenv').config();
 const app = express();
 
@@ -17,8 +17,8 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('/api/cards', cardsRoutes);
-app.use('/api/decks', decksRoutes);
+app.use('/api/tasks', tasksRoutes);
+app.use('/api/events', eventsRoutes);
 
 
 app.get('/', (req, res) => {
@@ -40,8 +40,5 @@ mongoose.connect(MONGODB_URI)
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running on http://localhost:${PORT}`);
-    console.log('Available endpoints:');
-    console.log('  GET /api/cards');
-    console.log('  GET /api/decks');
 });
 

@@ -3,9 +3,10 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "expo": "^54.0.27",
+    "expo-checkbox": "~5.0.8",
     "expo-router": "^6.0.17",
     "express": "^5.2.1",
-    "mongoose": "^9.0.1",
+    "mongoose": "^9.0.2",
     "react": "^19.2.1"
   },
   "type": "module",

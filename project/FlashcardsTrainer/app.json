@@ -7,6 +7,9 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+    "extra": {
+      "baseUrl": "http://10.200.76.120:3000"
+    },
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
@@ -29,7 +32,8 @@
     },
     "scheme": "FlashcardsTrainer",
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-audio"
     ]
   }
 }
